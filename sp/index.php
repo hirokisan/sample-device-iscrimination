@@ -75,7 +75,7 @@
 	    <p>hello mobile</p>
 	    <p>hello mobile</p>
 	</div>
-    <iframe style="width: 100%; overflow-x: hidden; height: 200px;" src="iframe.html"></iframe>
+    <iframe style="width: 100%; overflow-x: scroll; height: 200px;" src="iframe.html"></iframe>
 	    <p>hello mobile</p>
 	    <p>hello mobile</p>
 	    <p>hello mobile</p>
