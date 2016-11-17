@@ -168,12 +168,6 @@
     z-index: 10;
 }
 .hidden {display: none;}
-.html{
-overflow-x: hidden;
-}
-.body{
-overflow-x: hidden;
-}
 </style>
 <script>
 $(function(){
