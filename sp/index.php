@@ -13,7 +13,7 @@
             <h1 class="">this is mobile site</h1>
             <button class="absolute" id="accordion-menu">CV</button>
         </div>
-        <div id="accordion" class="display_off">
+        <div id="accordion" class="hidden">
     <p>hello mobile</p>
     <p>hello mobile</p>
     <p>hello mobile</p>
@@ -74,102 +74,39 @@
 	    <p>hello mobile</p>
 	    <p>hello mobile</p>
 	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
-	    <p>hello mobile</p>
 	</div>
+    <iframe style="width: 100%; overflow-x: hidden; height: 200px;" src="iframe.html"></iframe>
+	    <p>hello mobile</p>
+	    <p>hello mobile</p>
+	    <p>hello mobile</p>
+	    <p>hello mobile</p>
+	    <p>hello mobile</p>
+	    <p>hello mobile</p>
+	    <p>hello mobile</p>
+	    <p>hello mobile</p>
+	    <p>hello mobile</p>
+	    <p>hello mobile</p>
+	    <p>hello mobile</p>
+	    <p>hello mobile</p>
+	    <p>hello mobile</p>
+	    <p>hello mobile</p>
+	    <p>hello mobile</p>
+	    <p>hello mobile</p>
+	    <p>hello mobile</p>
+	    <p>hello mobile</p>
+	    <p>hello mobile</p>
+	    <p>hello mobile</p>
+	    <p>hello mobile</p>
+	    <p>hello mobile</p>
+	    <p>hello mobile</p>
+	    <p>hello mobile</p>
+	    <p>hello mobile</p>
+	    <p>hello mobile</p>
+	    <p>hello mobile</p>
+	    <p>hello mobile</p>
+	    <p>hello mobile</p>
+	    <p>hello mobile</p>
+	    <p>hello mobile</p>
 </body>
 </html>
 
@@ -213,20 +150,10 @@
     bottom: 0px;
     right: 15px;
 }
-.display_off{
-    display: none;
-}
 .contents {
     margin-top: 80px;
 }
-body {
-  width: 100%;
-}
 
-body.noscroll {
-  position: fixed;
-  overflow-y: scroll;
-}
 .fixed {
     position: fixed;
     width: 100%;
@@ -240,6 +167,13 @@ body.noscroll {
     overflow-y: scroll;
     z-index: 10;
 }
+.hidden {display: none;}
+.html{
+overflow-x: hidden;
+}
+.body{
+overflow-x: hidden;
+}
 </style>
 <script>
 $(function(){
@@ -247,16 +181,31 @@ $(function(){
     var scrollpos;
 
     $('#accordion-menu').on('click', function(){
+        $('#accordion').toggleClass("open");
         if(state == false) {
             scrollpos = $(window).scrollTop();
             $('body').addClass('fixed').css({'top': -scrollpos});
-            $('#accordion').addClass('open');
             state = true;
+            //$('#accordion').fadeIn(800);
+            $('#accordion').slideDown(300).queue(function(){
+                $('#accordion').removeClass('hidden');
+                //alert("false");
+
+            });
+
         } else {
+            $('#accordion').addClass('hidden');
             $('body').removeClass('fixed').css({'top': 0});
             window.scrollTo( 0 , scrollpos );
-            $('#accordion').removeClass('open');
             state = false;
+            //$('#accordion').fadeOut(600);
+            $('#accordion').slideUp(300).queue(function(){
+                //$('#accordion').addClass('hidden');
+                alert("true");
+
+            });
+            //$('#accordion').slideUp(300);
+            //$('.hidden').addClass('hidden');
         }
     });
 
