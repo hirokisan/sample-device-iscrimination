@@ -17,6 +17,34 @@
     <p>hello mobile</p>
     <p>hello mobile</p>
     <p>hello mobile</p>
+
+<style>
+.table {
+    display: table;
+    table-layout: fixed;
+}
+.table_cell {
+    display: table-cell;
+    height: 50px;
+    vertical-align: middle;
+    text-align: center;
+}
+.width100 {
+    width: 100%;
+}
+.width49per {
+    width: 49%;
+}
+.bg_color_blue {
+    background: blue;
+}
+.bg_color_red {
+    background: red;
+}
+.font_color_white {
+    color: white;
+}
+</style>
     <p>hello mobile</p>
     <p>hello mobile</p>
     <p>hello mobile</p>
@@ -75,7 +103,13 @@
 	    <p>hello mobile</p>
 	    <p>hello mobile</p>
 	</div>
-    <iframe style="width: 100%; overflow-x: scroll; height: 200px;" src="iframe.html"></iframe>
+    <div>
+        <iframe style="width: 100%; overflow-x: scroll; height: 200px;" src="iframe.html"></iframe>
+    </div>
+    <div class="table width100">
+        <div class="table_cell width49per bg_color_blue"><span class="font_color_white">baka</span></div>
+        <div class="table_cell width49per bg_color_red"><span class="font_color_white">hello</span></div>
+    </div>
 	    <p>hello mobile</p>
 	    <p>hello mobile</p>
 	    <p>hello mobile</p>
